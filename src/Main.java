@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
@@ -12,19 +10,19 @@ public class Main {
         System.out.println("Задание 2");
         int clientDeviceOS1 = 0;
         int clientDeviceYear = 2014;
-        if ((clientDeviceOS1 == 0) || (clientDeviceYear < 2015)) {
+        if ((clientDeviceOS1 == 0) && (clientDeviceYear < 2015)) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             }
-        if ((clientDeviceOS1 == 1) || (clientDeviceYear < 2015)) {
+        if ((clientDeviceOS1 == 1) && (clientDeviceYear < 2015)) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("Установите версию приложения для Android по ссылке");
             }
         System.out.println("Задание 3");
         int year = 2021;
-        if (((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))) {
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
                 System.out.println(year + " указанный год високосный");
         } else {
             System.out.println(year + " указанный год не високосный");
