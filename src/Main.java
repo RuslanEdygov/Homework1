@@ -8,22 +8,21 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         System.out.println("Задание 2");
-        int clientDeviceOS1 = 0;
-        int clientDeviceYear = 2014;
-        if ((clientDeviceOS1 == 0) && (clientDeviceYear < 2015)) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            }
-        if ((clientDeviceOS1 == 1) && (clientDeviceYear < 2015)) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+        int clientOS1 = 0;
+        int clientDeviceYear = 2016;
+        if (clientOS1 == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientOS1 == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS1 == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
         System.out.println("Задание 3");
         int year = 2021;
-        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
-                System.out.println(year + " указанный год високосный");
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println(year + " указанный год високосный");
         } else {
             System.out.println(year + " указанный год не високосный");
         }
@@ -42,43 +41,19 @@ public class Main {
             System.out.println("Потребуется дней: " + deliveryDays);
         }
         System.out.println("Задание 5");
-        int monthNumber = 12;
+        int monthNumber = 15;
         switch (monthNumber) {
-            case 1:
+            case 1,2,12:
                 System.out.println("Зима");
                 break;
-            case 2:
-                System.out.println("Зима");
-                break;
-            case 3:
+            case 3,4,5:
                 System.out.println("Весна");
                 break;
-            case 4:
-                System.out.println("Весна");
-                break;
-            case 5:
-                System.out.println("Весна");
-                break;
-            case 6:
+            case 6,7,8:
                 System.out.println("Лето");
                 break;
-            case 7:
-                System.out.println("Лето");
-                break;
-            case 8:
-                System.out.println("Лето");
-                break;
-            case 9:
+            case 9,10,11:
                 System.out.println("Осень");
-                break;
-            case 10:
-                System.out.println("Осень");
-                break;
-            case 11:
-                System.out.println("Осень");
-                break;
-            case 12:
-                System.out.println("Зима");
                 break;
             default:
                 System.out.println("Такого месяца не существует");
