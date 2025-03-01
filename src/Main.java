@@ -24,9 +24,9 @@ public class Main {
         int population = 12000000;
         int birthRate = 17;
         int mortalityRate = 8;
-        for (int c = 1; c < 10; c++) {
+        for (int c = 1; c <= 10; c++) {
             population = (((population / 1000) * birthRate) - (population / 1000) * mortalityRate) + (population);
-            System.out.println("Месяц " + c + " численность населения составляет " + population);
+            System.out.println("Год " + c + " численность населения составляет " + population);
         }
         System.out.println("Задание 4");
         int savings = 0;
@@ -70,21 +70,22 @@ public class Main {
             }
         }
         System.out.println("Задание 7");
-        int p = 1;
+        int p = 7;
         while (p <= 31) {
-            p++;
-            {
-                if (p % 7 == 0) {
-                    System.out.println("Сегодня пятница " + p + " число. Необходимо подготовить отчет");
-                }
-            }
+            System.out.println("Сегодня пятница " + p + " число. Необходимо подготовить отчет");
+            p += 7;
         }
         System.out.println("Задание 8");
+
         int yearFly = 2025 - 200;
         int yearNext = 2025 + 100;
-        for (int year = yearFly; year < yearNext; year++) {
+        for (
+                int year = yearFly;
+                year < yearNext; year++) {
             if (year % 79 == 0) {
-                System.out.println(year);
+                System.out.
+
+                        println(year);
             }
         }
     }
