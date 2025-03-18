@@ -12,8 +12,8 @@ public class Main {
         downloadApp(clientOS, clientDeviceYear);
         System.out.println("Задание 3");
         int deliveryDistance = 95;
-        int deliveryDays = 1;
-        homeDeliveryCards(deliveryDistance, deliveryDays);
+        //int deliveryDays = 1;
+        calculateDeliveryDays(deliveryDistance);
     }
 
     public static void verificationYear(int year) {
@@ -36,19 +36,19 @@ public class Main {
         }
     }
 
-    public static void homeDeliveryCards(int deliveryDistance, int deliveryDays) {
-        if (deliveryDistance > 20) {
-            deliveryDays++;
-        }
-        if (deliveryDistance > 60) {
-            deliveryDays++;
-        }
-        if (deliveryDistance > 100) {
+    public static void calculateDeliveryDays(int deliveryDistance) {
+        int count = 1;
+        if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            count = 2;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            count = 3;
+        } else if (deliveryDistance > 100) {
             System.out.println("Доставки нет");
-        } else {
-            System.out.println("Потребуется дней: " + deliveryDays);
+            return;
         }
+        System.out.println("Потребуется дней: " + count);
     }
 }
+
 
 
