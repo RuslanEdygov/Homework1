@@ -3,50 +3,21 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Задание 1");
-        int year = 2021;
-        verificationYear(year);
-        System.out.println("Задание 2");
-        int clientOS = 1;
-        int clientDeviceYear = 2016;
-        downloadApp(clientOS, clientDeviceYear);
-        System.out.println("Задание 3");
-        int deliveryDistance = 95;
-        //int deliveryDays = 1;
-        calculateDeliveryDays(deliveryDistance);
-    }
-
-    public static void verificationYear(int year) {
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            System.out.println(year + " указанный год високосный");
-        } else {
-            System.out.println(year + " указанный год не високосный");
-        }
-    }
-
-    public static void downloadApp(int clientOS, int clientDeviceYear) {
-        if (clientOS == 0 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientOS == 0) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        }
-    }
-
-    public static void calculateDeliveryDays(int deliveryDistance) {
-        int count = 1;
-        if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            count = 2;
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            count = 3;
-        } else if (deliveryDistance > 100) {
-            System.out.println("Доставки нет");
-            return;
-        }
-        System.out.println("Потребуется дней: " + count);
+        Author author1 = new Author("Михаил", "Булгаков");
+        Author author2 = new Author("Лев", "Толстой");
+        System.out.println("Первый автор - " + author1.getName() +
+                " " + author1.getSurname());
+        System.out.println("Второй автор - " + author2.getName() +
+                " " + author2.getSurname());
+        Book book1 = new Book("Мастер и Маргарита", author1, 1940);
+        Book book2 = new Book("Война и мир", author2, 1868);
+        System.out.println("Первая книга - " + book1.getBookTitles() + " автор " + author1.getName() +
+                " " + author1.getSurname() + " год публикации " + book1.getYearBookPublic());
+        System.out.println("Вторая книга - " + book2.getBookTitles() + " автор " + author1.getName() +
+                " " + author2.getSurname() + " год публикации " + book2.getYearBookPublic());
+        book1.setYearBookPublic(1996);
+        System.out.println("Изменен год публикации первой книги = " + book1.getBookTitles()+ " автор " + author1.getName() +
+                " " + author1.getSurname() + " год публикации " + book1.getYearBookPublic());
 
     }
 }
