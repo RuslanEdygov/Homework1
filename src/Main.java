@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Locale;
 
@@ -16,10 +17,17 @@ public class Main {
         System.out.println("Вторая книга - " + book2.getBookTitles() + " автор " + author1.getName() +
                 " " + author2.getSurname() + " год публикации " + book2.getYearBookPublic());
         book1.setYearBookPublic(1996);
-        System.out.println("Изменен год публикации первой книги = " + book1.getBookTitles()+ " автор " + author1.getName() +
+        System.out.println("Изменен год публикации первой книги = " + book1.getBookTitles() + " автор " + author1.getName() +
                 " " + author1.getSurname() + " год публикации " + book1.getYearBookPublic());
-
+        System.out.println(book1);
+        System.out.println(book2);
+        System.out.println(book1.equals(book2));
+        System.out.println(book2.equals(book1));
+        for (Book book : Arrays.asList(book1, book2)) {
+            System.out.println(book.hashCode());
+        }
     }
+
 }
 
 
