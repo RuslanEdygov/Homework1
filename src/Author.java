@@ -31,9 +31,8 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Author{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
+        return "Автор " +
+                "имя - " + name +
+                ", фамилия - " + surname;
     }
 }

@@ -21,6 +21,8 @@ public class Main {
                 " " + author1.getSurname() + " год публикации " + book1.getYearBookPublic());
         System.out.println(book1);
         System.out.println(book2);
+        System.out.println(author1);
+        System.out.println(author2);
         System.out.println(book1.equals(book2));
         System.out.println(book2.equals(book1));
         for (Book book : Arrays.asList(book1, book2)) {

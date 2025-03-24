@@ -42,9 +42,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "yearBookPublic=" + yearBookPublic +
-                ", bookTitles='" + bookTitles + '\'' +
-                '}';
+        return "Книга - " +
+                "год публикации- " + yearBookPublic +
+                ", название книги- " + bookTitles;
     }
 }
